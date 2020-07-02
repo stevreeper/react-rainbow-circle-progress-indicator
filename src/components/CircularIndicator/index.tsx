@@ -29,8 +29,6 @@ export const CircularIndicator: React.FC<CircularIndicatorProps> = (props) => {
       .append("svg:svg")
       .attr("width", width)
       .attr("height", height);
-    // .attr("viewBox", `0 0 ${width} ${height}`)
-    // .attr("preserveAspectRatio", "xMinYMin meet");
 
     renderIndicator();
   }
@@ -70,10 +68,33 @@ export const CircularIndicator: React.FC<CircularIndicatorProps> = (props) => {
     //Indicator foreground
     const foreground = meter.append("path").attr("class", "foreground");
 
+    //Icon
+    // const img = meter
+    //   .append("image")
+    //   .attr("href", "https://simpleicons.org/icons/kaios.svg")
+    //   .attr("width", "50px")
+    //   .attr("height", "50px")
+    //   .attr("x", "-25px")
+    //   .attr("y", "-25px");
+
+    // const textSvg = d3
+    //   .select("#indicatorContainer")
+    //   .append("svg:svg")
+    //   .attr("width", width / 2)
+    //   .attr("height", height / 2);
+
+    // const textSvgChild = textSvg
+    //   .append("g")
+    //   .attr(
+    //     "transform",
+    //     "translate(" + props.height / 4 + "," + props.height / 4 + ")"
+    //   );
+
     const text = meter
       .append("text")
       .attr("text-anchor", "middle")
-      .attr("dominant-baseline", "middle");
+      .attr("dominant-baseline", "middle")
+      .attr("class", "text");
 
     function transition(t: number) {
       //Creates interpolation between 0 and the current health

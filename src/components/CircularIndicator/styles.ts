@@ -7,4 +7,11 @@ export const IndicatorContainer = styled.section`
   background: white;
   height: 400px;
   width: 400px;
+  padding: 20px;
+
+  & .text {
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
 `;

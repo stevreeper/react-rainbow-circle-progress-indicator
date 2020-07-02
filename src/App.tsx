@@ -23,8 +23,8 @@ function App() {
       <GlobalStyle />
       <Container>
         <CircularIndicator
-          width={300}
-          height={300}
+          width={200}
+          height={200}
           total={0.87}
           colors={colors}
         />
